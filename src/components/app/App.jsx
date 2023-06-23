@@ -31,7 +31,8 @@ export const App = () => {
         };
 
         setGallery(prev => [...prev, ...hits]);
-        setTotalPages(Math.floor(totalHits / 12));
+        setTotalPages(Math.ceil(totalHits / 12));
+
       } catch (error) {
         setError(error);
       } finally {
